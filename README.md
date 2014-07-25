@@ -1,3 +1,11 @@
+
+The presentation source is in presentation.tex
+You can build it with
+
+```
+pdflatex presentation.tex
+```
+
 ### What is a git and how do I get one?
 
 Git is a version control system developed for working on the Linux
