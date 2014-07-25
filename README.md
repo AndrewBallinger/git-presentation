@@ -6,14 +6,6 @@ You can build it with
 pdflatex presentation.tex
 ```
 
-author:
-- Andrew Ballinger
-subtitle: '(Working Title)'
-title: ' Git and You \<3 '
-...
-
-
-
 ### What is a git and how do I get one?
 
 Git is a version control system developed for working on the Linux
