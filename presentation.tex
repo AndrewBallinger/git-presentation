@@ -6,6 +6,7 @@
 \usepackage{textcomp}
 
 \usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
 
 \usepackage{DejaVuSansMono}
 
@@ -14,8 +15,12 @@
 \lstset{upquote=true}
 
 \usetheme{Rochester}
-\title{Git and You <3 (Working Title)}
+\title{ Git and You <3 } 
+\subtitle{(Working Title)}
+\author{Andrew Ballinger}
 \begin{document}
+
+\frame{\titlepage}
 
 \begin{frame}[fragile]
 \frametitle{What is a git and how do I get one?}
@@ -123,8 +128,8 @@ Spoiler: It's the current commit
 \frametitle{Branching}
 
 \begin{lstlisting}[frame=single]
-  git branch "Fish rule"
-  git checkout "Fish rule"
+  git branch "fish_rule"
+  git checkout "fish_rule"
   echo 'puts "Fish Rule"' >> hello.rb
   ruby hello.rb
   git commit -am "Fish are way better then cats"
@@ -140,6 +145,97 @@ Spoiler: It's the current commit
 \end{figure}
 
 \end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Merging}
+
+Merging allows you to combine changes
+
+\vspace{1em}
+
+\begin{lstlisting}[frame=single]
+  git diff master
+  git merge master
+\end{lstlisting}
+
+\vspace{1em}
+
+O noes! Some compromise must be reached
+
+\vspace{1em}
+
+\begin{lstlisting}[frame=single]
+  git status
+  git checkout --ours hello.rb 
+  git status
+  git commit -am "Fish are better"
+  git status
+\end{lstlisting}
+
+\begin{figure}[p]
+  \centering
+  \includegraphics[height=5em]{merge.png}
+\end{figure}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Fast Forwarding}
+
+Fish are super awesome, they're going into production.
+
+\vspace{1em}
+
+\begin{lstlisting}[frame=single]
+ git checkout master
+ git merge fish_rule
+ git status
+ git log
+\end{lstlisting}
+
+\begin{figure}[p]
+  \centering
+  \includegraphics[height=5em]{fast_forward.png}
+\end{figure}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Push and Pull}
+
+Push moves your current branch onto a remote server
+
+\vspace{1em}
+
+\begin{lstlisting}[frame=single]
+  git push 
+\end{lstlisting}
+
+\vspace{1em}
+
+Pull gets (merges!) your current branch from the remote server
+
+\vspace{1em}
+
+\begin{lstlisting}[frame=single]
+  git pull 
+\end{lstlisting}
+
+\end{frame}
+
+\begin{frame}
+
+\frametitle{That's it (basically)}
+
+\begin{figure}[p]
+  \centering
+  \includegraphics[height=15em]{howard.jpg}
+  \caption{Sure sure, you can use git, but can you really use git?}
+\end{figure}
+
+\end{frame}
+
+
 
 \begin{frame}
 \frametitle{Resources}
