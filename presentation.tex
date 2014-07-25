@@ -427,7 +427,6 @@ If you never do the likes of this, you're not trying hard enough.
 
 \end{frame}
 
-
 \begin{frame}[fragile]
 \frametitle{Reflog to the rescue!}
 
@@ -462,11 +461,10 @@ If you never do the likes of this, you're not trying hard enough.
 
 It's gone. Really gone.
 
+\vspace{1em}
+
 \begin{lstlisting}[frame=single]
-  touch the_file
-  git add the_file
-  git reset --hard
-  ls
+  git checkout -- .
 \end{lstlisting}
 
 \end{frame}
