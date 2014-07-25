@@ -1,0 +1,153 @@
+\documentclass{beamer}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{graphicx}
+\usepackage{upquote}
+\usepackage{textcomp}
+
+\usepackage[T1]{fontenc}
+
+\usepackage{DejaVuSansMono}
+
+\lstset{basicstyle=\fontfamily{dejavu}\footnotesize\ttfamily,breaklines=true}
+\lstset{frame=bottomline}
+\lstset{upquote=true}
+
+\usetheme{Rochester}
+\title{Git and You <3 (Working Title)}
+\begin{document}
+
+\begin{frame}[fragile]
+\frametitle{What is a git and how do I get one?}
+Git is a version control system developed for working on the Linux Kernel.
+
+\vspace{1em}
+
+\begin{lstlisting}[frame=single]
+ git init
+ ls
+ ls .git
+ git status
+\end{lstlisting}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Tracking files}
+
+Lets add some files.
+
+\vspace{1em}
+
+\begin{lstlisting}[frame=single]
+ touch some_random_file
+ echo "puts 'Hello World'" > hello.rb
+ ruby hello.rb
+ git add hello.rb
+ git status
+\end{lstlisting}
+
+\vspace{1em}
+
+\begin{lstlisting}[frame=single]
+echo "some_random_file" >> .gitignore
+git status
+\end{lstlisting}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Tracking changes}
+
+Lets save this stuff.
+
+\vspace{1em}
+
+\begin{lstlisting}[frame=single]
+  git commit -m "This is the first commit"
+  git status
+  git log
+\end{lstlisting}
+
+\begin{figure}[p]
+  \centering
+  \includegraphics[height=5em]{first_commit.png}
+  \caption{First commit}
+\end{figure}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Tracking changes}
+
+Lets do some stuff.
+
+\vspace{1em}
+
+\begin{lstlisting}[frame=single]
+  echo "puts 'Hello Fish'" > hello.rb
+  ruby hello.rb
+  git commit -m 'Hello Fish?'
+  echo 'puts "Hello " + [0x1F431].pack("U*")' > hello.rb
+  git commit -am 'Hello ?'
+  ruby hello.rb
+\end{lstlisting}
+
+\begin{figure}[p]
+  \centering
+  \includegraphics[height=5em]{some_commits.png}
+\end{figure}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{What is HEAD?}
+
+Spoiler: It's the current commit
+
+\vspace{1em}
+
+\begin{lstlisting}[frame=single]
+  git checkout HEAD~1
+  ruby hello.rb
+\end{lstlisting}
+
+\begin{figure}[p]
+  \centering
+  \includegraphics[height=5em]{head.png}
+\end{figure}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Branching}
+
+\begin{lstlisting}[frame=single]
+  git branch "Fish rule"
+  git checkout "Fish rule"
+  echo 'puts "Fish Rule"' >> hello.rb
+  ruby hello.rb
+  git commit -am "Fish are way better then cats"
+  echo '["Fish live in the ocean."]' >> fish_facts.json
+  git add fish_facts.json
+  git commit -am "Some fish facts"
+  git log
+\end{lstlisting}
+
+\begin{figure}[p]
+  \centering
+  \includegraphics[height=5em]{fish.png}
+\end{figure}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Resources}
+
+\begin{itemize}
+\item{githug}
+\end{itemize}
+  
+\end{frame}
+
+\end{document}
