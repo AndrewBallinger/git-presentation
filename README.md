@@ -1,5 +1,3 @@
-[fragile]
-
 ### What is a git and how do I get one?
 
 Git is a version control system developed for working on the Linux
@@ -11,8 +9,6 @@ Kernel.
  ls .git
  git status
 ```
-
-[fragile]
 
 ### Tracking files
 
@@ -31,8 +27,6 @@ echo "some_random_file" >> .gitignore
 git status
 ```
 
-[fragile]
-
 ### Tracking changes
 
 Lets save this stuff.
@@ -44,8 +38,6 @@ Lets save this stuff.
 ```
 
 ![First commit](first_commit.png)
-
-[fragile]
 
 ### Tracking changes
 
@@ -62,8 +54,6 @@ Lets do some stuff.
 
 ![image](some_commits.png)
 
-[fragile]
-
 ### What is HEAD?
 
 Spoiler: It’s the current commit
@@ -75,8 +65,6 @@ Spoiler: It’s the current commit
 ```
 
 ![image](head.png)
-
-[fragile]
 
 ### Branching
 
@@ -94,8 +82,6 @@ Spoiler: It’s the current commit
 
 ![image](fish.png)
 
-[fragile]
-
 ### Merging
 
 Merging allows you to combine changes
@@ -104,8 +90,6 @@ Merging allows you to combine changes
   git diff master
   git merge master
 ```
-
-[fragile]
 
 ### Merging
 
@@ -127,8 +111,6 @@ Merging allows you to combine changes
 
 ![image](merge.png)
 
-[fragile]
-
 ### Fast Forwarding
 
 Fish are super awesome, they’re going into production.
@@ -141,8 +123,6 @@ Fish are super awesome, they’re going into production.
 ```
 
 ![image](fast_forward.png)
-
-[fragile]
 
 ### Push and Pull
 
@@ -162,8 +142,6 @@ Pull gets (merges!) your current branch from the remote server
 
 ![Sure sure, you can use git, but can you really use git?](howard.jpg)
 
-[fragile]
-
 ### git praise (It’s really called git blame)
 
 Credit where credit is due.
@@ -179,8 +157,6 @@ Credit where credit is due.
 
 -   <span>What was the most recent change?</span>
 
-[fragile]
-
 ### git bisect
 
 Find out the exact commit that broke something.
@@ -193,8 +169,6 @@ Find out the exact commit that broke something.
 ```
 
 When it works it’s magical, try it out.
-
-[fragile]
 
 ### git diff revisited
 
@@ -216,8 +190,6 @@ Diff is your friend; it is way more powerful then you might know.
   git diff HEAD cats_strike_again
 ```
 
-[fragile]
-
 ### git log revisited
 
 Git log also has super powers.
@@ -233,8 +205,6 @@ Git log also has super powers.
 -   <span>What was that code I wrote last tuesday?</span>
 
 -   <span>Who added this feature and who uses it?</span>
-
-[fragile]
 
 ### git rebase
 
@@ -253,8 +223,6 @@ Git log also has super powers.
 
 ![image](dog.png)
 
-[fragile]
-
 ### git rebase
 
 Subtly different from a merge! Can be used to produce a git history with
@@ -265,8 +233,6 @@ no merge conflict commits.
 ```
 
 ![image](rebase.png)
-
-[fragile]
 
 ### git cherrypick
 
@@ -282,8 +248,6 @@ no merge conflict commits.
 
 ![image](cherry.png)
 
-[fragile]
-
 ### Losing your work with delete
 
 If you never do the likes of this, you’re not trying hard enough.
@@ -298,8 +262,6 @@ If you never do the likes of this, you’re not trying hard enough.
 
 ![image](gone.png)
 
-[fragile]
-
 ### Reflog to the rescue!
 
 ``` {frame="single"}
@@ -309,8 +271,6 @@ If you never do the likes of this, you’re not trying hard enough.
 ```
 
 ![image](returned.png)
-
-[fragile]
 
 ### Losing your work with reset
 
@@ -326,8 +286,6 @@ It’s gone. Really gone.
 ``` {frame="single"}
   git checkout -- .
 ```
-
-[fragile]
 
 ### So what?
 
