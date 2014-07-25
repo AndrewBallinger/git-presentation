@@ -93,6 +93,7 @@ Lets do some stuff.
   echo "puts 'Hello Fish'" > hello.rb
   ruby hello.rb
   git commit -m 'Hello Fish?'
+  git add hello.rb
   echo 'puts "Hello " + [0x1F431].pack("U*")' > hello.rb
   git commit -am 'Hello?'
   ruby hello.rb
@@ -345,7 +346,7 @@ Git log also has super powers.
 
 \begin{lstlisting}[frame=single]
   git checkout master
-  git branch dog
+  git branch  dog
   touch foo
   git add foo
   git commit -m "Added foo"
@@ -388,8 +389,10 @@ Subtly different from a merge! Can be used to produce a git history with no merg
 
 \begin{lstlisting}[frame=single]
   touch good_file
+  git add good_file
   git commit -am "good commit"
   touch bad_file
+  git add bad_file
   git commit -am "bad commit"
   git checkout master
   git cherry-pick <find the good one>
